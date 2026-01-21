@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100;
+    line-height: 1.5;
+
+}
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 999;
+
+}
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+   
+}
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+
+}
+nav a:hover {
+    color: #a7a7a7;
+
+}
+.btn-signing {
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+.btn-signing:hover{
+    background-color: white;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    min-height: calc(90vh - 6rem);
+    position: relative;
+
+}
+
+.conent{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+
+}
+
+.tag-box{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5,
+    #5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+
+}
+@keyframes animationGradient {
+    to{
+        background-position: 200%;
+
+    }
+}
+.tag-box .tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+}
+
+.tag-box .tag:hover{
+    color: #5300a0;
+
+}
+
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgb(128, 128, 128, 0.418);
+
+}
+
+.description {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 53rem;
+    color: gray;
+
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.btn-get-started {
+    text-decoration: none;
+    border: 1px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+
+.btn-get-started:hover {
+    background-color: #1a1a1a;
+
+}
+
+.btn-signing-main{
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.2s ease;
+
+}
+
+.btn-signing-main:hover {
+    background-color: gray
+}
+.Headphone-3d {
+    position: absolute;
+    top: 0;
+    right: -23%;
+    size: 100px;
+    scale: 0.7;
+    top: -11%;
+}
+.features-section{
+    padding: 5rem 2rem;
+    margin-top: 5rem;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+.section-header h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+
+}
+.section-header p {
+    color: #a7a7a7;
+    font-size: 1.1rem;
+
+}
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 11;
+}
+.feature-card {
+    background-color: #0f0f0f;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #5300a0;
+
+}
+.icon-wrapper {
+    background-color: #1a1a1a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    color: #e7e7e7;
+    transition: color 0.3s ease;
+}
+.feature-card:hover .icon-wrapper{
+    color: #bfa1ff;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+
+}
+.feature-card p {
+    color: #888;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.specs-section {
+    padding: 5rem 2rem;
+    background-color: black;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.section-header h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.accordion-item {
+    border-bottom: 1px solid #333;
+}
+.accordion-button {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+}
+.accordion-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e7e7e7 !important;
+}
+.accordion-button .icon{
+    font-size: 2rem;
+    color: #666;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.accordion-button.hover .accordion-title{
+    color: white !important;
+}
+.accordion-button:hover .icon{
+    color: white;
+}
+.accordion-button.active .accordion-title {
+    color: #bfa1ff !important;
+}
+.accordtion-button.active .icon{
+    transform: rotate(45deg);
+    color: #bfa1ff;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: black;
+}
+.spec-grid {
+    display: grid;
+    grid-template-columns :1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+.spec-box h4{
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+.spec-box p{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+@media (max-width: 600px){
+    .spec-grid{
+        grid-template-columns: 1fr;
+    }
+}
+.cta-section {
+    padding: 8rem 2rem;
+    background-color: linear-gradient(to bottom, black, #0f0f0f);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.cta-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.cta-container h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+.cta-container p{
+    color: #a7a7a7;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+.cta-buttons{
+    display: flex;
+    justify-content:center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.btn-cta-primary{
+    background-color: white;
+    color: black;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+
+}
+.btn-cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    background-color: #bfa1ff;
+}
+.btn-cta-secondary {
+    background-color: transparent;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+.btn-cta-secondary:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 768px){
+    .cta-container h2 {
+        font-size: 2.5rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .btn-cta-primary, .btn-cta-secondary {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+@media (max-width: 768px){
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .feature-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 1300px ) {
+    header{
+        padding: 1rem 0.5rem;
+
+    }
+    .content{
+        margin-top: 85%;
+
+    }
+
+    .Headphone-3d {
+        scale: 0.8;
+        top: 20%;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        padding: 1rem 0.1rem;
+    }
+    nav{
+        display: none;
+    }
+
+    header h1{
+        font-size: 2rem;
+    }
+    .btn-signing{
+        padding: 0.6rem 1.5rem;
+    }
+
+    .content{
+        margin-top: 25rem;
+    }
+
+    .Headphone-3d {
+        scale: 0.5;
+        top:25%;
+        right: 0;
+    }
+
+    .content{
+        max-width:30rem;
+        margin-left: 10%;
+    }
+
+    .tag-box{
+        width: 12rem;
+    }
+
+    .content h1{
+        font-size:2.5rem;
+    }
+
+    .description{
+        font-size: 1rem;
+    }
+
+    .btn-get-started{
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .btn-signing-main{
+        font-size:0.8rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
